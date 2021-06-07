@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Maths Game</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="res/css/game.css">
+</head>
+<body>
+	<section id="intro">
+		<div class="container" id="first">	
+			<div class="d-flex justify-content-center align-items-center m-auto">
+				<div class="row border w-100">
+					<div class="col-md-6 text-center">
+						<div class="pt-5">
+							<img src="res/imgs/child.png" class="img-fluid" width="200px">
+						</div>
+						<h1 class="font-weight-bold py-2">RAD5 Academy</h1>
+						<h2  class="font-weight-bold">Game Math <small>v 1.0.0</small></h2>
+						<p>Try Out Your Maths Skills</p>
+					</div>
+					<div class="col-md-6 bg-light pb-5">
+						<h1 class="pt-5 font-weight-bold">Enter Your Details To Start</h1>
+						<div class="">
+							<h5 class="pt-3 font-weight-bold">Please Enter Your Name</h5>
+							<input type="text" id="name" class="form-control">
+							
+						</div>
+						<div class="pb-5">
+							<h5 class="pt-4 font-weight-bold">Select An Operator</h5>
+							<select class="form-control my-2" id="operator">
+								<option value="1" selected>Addition (+)</option>
+								<option value="2">Subtraction (-)</option>
+								<option value="3">Division (/)</option>
+								<option value="4">Multiplication (*)</option>
+							</select>
+							<button class="btn btn-primary btn-block" onclick="getData()">Proceed</button>
+						</div>
+					</div>	
+				</div>
+			</div>
+		</div>
+		<div class="container d-none" id="last">	
+			<div class="d-flex justify-content-center align-items-center m-auto">
+				<div class="row border w-100">
+					<div class="col text-center">
+						<div class="d-flex justify-content-between font-weight-bold">
+							<div>
+								Name : <span id="userName"></span> <span class="d-inline d-sm-none">|</span>
+							</div>
+							<div>
+								Operator  : <span id="selectedOperator">Addition (+)</span> <span class="d-inline d-sm-none">|</span>
+							</div>
+							<div>
+								Point(s) : <span id="currentPoints">3</span>
+							</div>
+
+						</div>
+						<div class="d-flex justify-content-around font-weight-bold pt-5 mt-5">
+							<div class="border p-5 bg-danger">
+								<span id="num1">0</span> 
+							</div>
+							<div class="border bg-warning text-dark p-5">
+								<span id="gOperator">+</span> 
+							</div>
+							<div class="border p-5 bg-danger">
+								<span id="num2">0</span>
+							</div>
+						</div>
+						<div class="d-flex justify-content-center font-weight-bold pt-5 mt-5">
+							<div>
+								<h1>Answer = </h1>
+							</div>
+							<div>
+								<input type="number" id="answer" placeholder="Your Answer" class="form-control form-control-lg">
+							</div>
+							
+						</div>
+						<div class="mt-3">
+							<button onclick="submit()" class="btn btn-success btn-lg w-50">Submit</button>
+						</div>
+
+						<div class="col-12 text-right">
+							<button onclick="resetGame()" class="btn btn-danger">Reset Game</button>
+						</div>	
+
+						
+					</div>
+					
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" ></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" ></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" ></script>
+	<script src="res/js/game.js"></script>
+</body>
+</html>
